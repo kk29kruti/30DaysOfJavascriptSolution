@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model</title>
+  </head>
+  <body>
+    <h1 class="title" id="first-title">First Title</h1>
+    <h1 class="title" id="second-title">Second Title</h1>
+    <h1 class="title" id="third-title">Third Title</h1>
+    <h1></h1>
+
+    <script>
+      //by tag name
+      //   const allTitles = document.getElementsByTagName("h1");
+      //   console.log(allTitles);
+      //   console.log(allTitles.length);
+      //   for (let i = 0; i < allTitles.length; i++) {
+      //     console.log(allTitles[i]); // prints each elements in the HTMLCollection
+      //   }
+
+      //by class name
+      //   const allTitles = document.getElementsByClassName("title");
+      //   console.log(allTitles);
+
+      //by id
+      //   const firstTitle = document.getElementById("first-title");
+      //   console.log(firstTitle);
+
+      //by querySelector
+      //   const query = document.querySelector("h1");
+      //   console.log(query);
+
+      //by querySelectorAll
+      //   const allQuery = document.querySelectorAll("h1");
+      //   console.log(allQuery);
+
+      //by adding attributes
+      //   const title = document.querySelector("h1");
+      //   title.className = "AddTitle";
+      //   title.id = "AddFirstTitle";
+      //   console.log(title);
+
+      //adding attribute using setAttribute method
+      //   title.setAttribute("class", "setClass");
+      //   title.setAttribute("id", "setID");
+      //   console.log(title);
+
+      //adding text at specified node using textContent
+      //   const titles = document.querySelectorAll("h1");
+      //   titles[3].textContent = "Fourth Title";
+
+      //adding HTML content of an element using innerHTML
+      //   const titles = document.querySelectorAll("h1");
+      //   titles[3].innerHTML = "Fourth Title";
+
+      //adding style
+      //1)adding style color,fontsize,backgroundColor (javascript ma css ni property camleCase ma thai jay)
+      const titles = document.querySelectorAll("h1");
+      titles.forEach((title, i) => {
+        title.style.fontSize = "24px";
+        if (i % 2 == 0) {
+          title.style.color = "Pink";
+          title.style.backgroundColor = "Black";
+        } else {
+          title.style.color = "green";
+          title.style.backgroundColor = "yellow";
+        }
+      });
+    </script>
+  </body>
+</html>
